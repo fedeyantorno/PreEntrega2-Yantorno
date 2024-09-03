@@ -14,6 +14,8 @@ let availableBalanceDollar = 0;
 const moneyPesos = "$";
 const moneyDollar = "u$s";
 
+const validationInputs = (signUpName, signUpPass) => (signUpName === "" || signUpPass === "") ? true : false;
+
 // Creamos el constructor para registrar usuarios
 class UserCreate {
     constructor (signUpName, signUpPass, signUpUserAge) {
@@ -84,14 +86,6 @@ function signUp(signUpUserAge) {
     // LLamamos la función de logeo y le pasamos los 2 parámetros a comparar
     logIn(userSignUp)
 
-};
-
-function validationInputs(signUpName, signUpPass) {
-    if (signUpName === "" || signUpPass === "") {
-        return true
-    } else {
-        return false
-    }   
 };
 
 // Solicitamos Logeo
